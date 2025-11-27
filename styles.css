@@ -171,7 +171,7 @@ section {
 }
 
 .nav-cta span {
-  transform: translateY(1px);
+  /* Removed translateY(1px) to fix icon alignment with Japanese text */
 }
 
 .nav-cta:hover {
@@ -316,7 +316,7 @@ section {
 
 .btn-icon {
   font-size: 1rem;
-  transform: translateY(1px);
+  /* Removed translateY(1px) to fix icon alignment with Japanese text */
 }
 
 /* ---------- Hero Right: Card ---------- */
