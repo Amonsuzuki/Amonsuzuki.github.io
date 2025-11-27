@@ -16,16 +16,17 @@
         </div>
         <div class="logo-text">
           <div class="logo-name">Amon Suzuki</div>
-          <div class="logo-role">Developer / Researcher</div>
+          <div class="logo-role" data-i18n="logoRole">Developer / Researcher</div>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="skills.html" data-i18n="navSkills">Skills</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button class="lang-switcher" onclick="toggleLanguage()" aria-label="Switch to Japanese">日本語</button>
         <a class="nav-cta" href="#" download>
-          <span>Download CV</span>
+          <span data-i18n="navDownloadCV">Download CV</span>
           <span>↓</span>
         </a>
       </nav>
@@ -35,45 +36,45 @@
   <main>
     <!-- About -->
     <section id="about">
-      <div class="section-label">About</div>
-      <h2 class="section-title">A short introduction</h2>
-      <p class="section-description">
+      <div class="section-label" data-i18n="aboutLabel">About</div>
+      <h2 class="section-title" data-i18n="aboutTitle">A short introduction</h2>
+      <p class="section-description" data-i18n="aboutDesc">
         A developer and researcher passionate about hardware, AI, and robotics.
       </p>
 
       <div class="about-grid">
         <div class="about-text">
-          <p>
+          <p data-i18n="aboutText1">
             I'm a developer and researcher who works across hardware design, machine learning,
             and robotics. I enjoy building systems that combine software and hardware
             to solve complex problems.
           </p>
-          <p>
+          <p data-i18n="aboutText2">
             Recently, I've been working on Spiking Neural Networks implemented on ASIC
             and ROS/Autoware tools for autonomous vehicles. I enjoy working on projects
             that push technological boundaries.
           </p>
-          <p>
+          <p data-i18n="aboutText3">
             I'm currently exploring opportunities in hardware engineering,
             machine learning research, and autonomous systems development.
           </p>
         </div>
         <div class="about-highlights">
           <article class="highlight-card">
-            <div class="highlight-title">Background</div>
-            <div>
+            <div class="highlight-title" data-i18n="aboutHighlight1Title">Background</div>
+            <div data-i18n="aboutHighlight1Text">
               Hardware engineering (Verilog/ASIC), Machine Learning, and Robotics (ROS/Autoware).
               Research-oriented approach.
             </div>
-            <div class="highlight-meta">Engineering / Research · Self-driven learner</div>
+            <div class="highlight-meta" data-i18n="aboutHighlight1Meta">Engineering / Research · Self-driven learner</div>
           </article>
           <article class="highlight-card">
-            <div class="highlight-title">How I work</div>
-            <div>
+            <div class="highlight-title" data-i18n="aboutHighlight2Title">How I work</div>
+            <div data-i18n="aboutHighlight2Text">
               I like calm communication, clear scopes, and feedback loops that
               are quick but respectful. Good documentation makes me happy.
             </div>
-            <div class="highlight-meta">Asynchronous-friendly · Remote-capable</div>
+            <div class="highlight-meta" data-i18n="aboutHighlight2Meta">Asynchronous-friendly · Remote-capable</div>
           </article>
         </div>
       </div>
@@ -81,14 +82,15 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerCopyright">Crafted with care.</span></div>
     <div class="footer-links">
-      <a href="index.html">Back to home</a>
-      <a href="#">Imprint</a>
-      <a href="#">Privacy</a>
+      <a href="index.html" data-i18n="footerBackHome">Back to home</a>
+      <a href="#" data-i18n="footerImprint">Imprint</a>
+      <a href="#" data-i18n="footerPrivacy">Privacy</a>
     </div>
   </footer>
 
+  <script src="lang.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

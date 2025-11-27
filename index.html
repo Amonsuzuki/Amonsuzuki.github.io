@@ -16,16 +16,17 @@
         </div>
         <div class="logo-text">
           <div class="logo-name">Amon Suzuki</div>
-          <div class="logo-role">Developer / Researcher</div>
+          <div class="logo-role" data-i18n="logoRole">Developer / Researcher</div>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="skills.html" data-i18n="navSkills">Skills</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button class="lang-switcher" onclick="toggleLanguage()" aria-label="Switch to Japanese">日本語</button>
         <a class="nav-cta" href="#" download>
-          <span>Download CV</span>
+          <span data-i18n="navDownloadCV">Download CV</span>
           <span>↓</span>
         </a>
       </nav>
@@ -38,26 +39,26 @@
       <div>
         <div class="hero-pre">
           <span class="hero-pre-dot"></span>
-          <span>Open for collaborations & new roles</span>
+          <span data-i18n="heroPre">Open for collaborations & new roles</span>
         </div>
         <h1 class="hero-title">
-          Hi, I'm <span>Amon Suzuki</span><br />
-          Building thoughtful digital experiences.
+          <span data-i18n="heroTitle1">Hi, I'm </span><span>Amon Suzuki</span><br />
+          <span data-i18n="heroTitle2">Building thoughtful digital experiences.</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
           I'm a developer and researcher interested in hardware design, neural networks,
           and robotics.
         </p>
 
         <div class="hero-tags">
-          <span class="tag">Hardware Engineering (ASIC/Verilog)</span>
-          <span class="tag">Machine Learning</span>
-          <span class="tag">Robotics / ROS</span>
+          <span class="tag" data-i18n="heroTag1">Hardware Engineering (ASIC/Verilog)</span>
+          <span class="tag" data-i18n="heroTag2">Machine Learning</span>
+          <span class="tag" data-i18n="heroTag3">Robotics / ROS</span>
         </div>
 
         <div class="hero-actions">
           <a href="work.html" class="btn-primary">
-            <span>View selected work</span>
+            <span data-i18n="heroBtn">View selected work</span>
             <span class="btn-icon">→</span>
           </a>
         </div>
@@ -72,19 +73,19 @@
               </div>
               <div>
                 <div class="hero-card-meta-title">Amon Suzuki</div>
-                <div class="hero-card-meta-sub">Based in Tokyo · Remote friendly</div>
+                <div class="hero-card-meta-sub" data-i18n="heroCardLocation">Based in Tokyo · Remote friendly</div>
               </div>
             </div>
-            <div class="hero-card-chip">Portfolio Snapshot</div>
+            <div class="hero-card-chip" data-i18n="heroCardChip">Portfolio Snapshot</div>
           </div>
 
           <div class="hero-card-body">
-            <p>
+            <p data-i18n="heroCardBody1">
               I enjoy working on hardware design, neural networks, and robotics.
               I care about building innovative solutions that push the boundaries
               of technology and create real-world impact.
             </p>
-            <p>
+            <p data-i18n="heroCardBody2">
               Outside of work, you'll find me exploring new technologies,
               contributing to open source, or working on research projects.
             </p>
@@ -92,27 +93,27 @@
 
           <div class="hero-card-stats">
             <div class="stat">
-              <div class="stat-label">Experience</div>
-              <div class="stat-value">1+ yr</div>
+              <div class="stat-label" data-i18n="heroCardExp">Experience</div>
+              <div class="stat-value" data-i18n="heroCardExpVal">1+ yr</div>
             </div>
             <div class="stat">
-              <div class="stat-label">Recent focus</div>
-              <div class="stat-value">ASIC/ML</div>
+              <div class="stat-label" data-i18n="heroCardFocus">Recent focus</div>
+              <div class="stat-value" data-i18n="heroCardFocusVal">ASIC/ML</div>
             </div>
             <div class="stat">
-              <div class="stat-label">Time zone</div>
-              <div class="stat-value">GMT+9</div>
+              <div class="stat-label" data-i18n="heroCardTz">Time zone</div>
+              <div class="stat-value" data-i18n="heroCardTzVal">GMT+9</div>
             </div>
           </div>
 
           <div class="hero-card-footer">
             <div class="hero-card-footer-left">
               <span class="status-dot"></span>
-              <span>Currently accepting selected freelance / side projects.</span>
+              <span data-i18n="heroCardStatus">Currently accepting selected freelance / side projects.</span>
             </div>
             <div class="hero-card-footer-links">
-              <a href="mailto:amonsuzuki@keio.jp">Email</a>
-              <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="mailto:amonsuzuki@keio.jp" data-i18n="heroCardEmail">Email</a>
+              <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer" data-i18n="heroCardGitHub">GitHub</a>
             </div>
           </div>
         </div>
@@ -124,14 +125,15 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerCopyright">Crafted with care.</span></div>
     <div class="footer-links">
-      <a href="#top">Back to top</a>
-      <a href="#">Imprint</a>
-      <a href="#">Privacy</a>
+      <a href="#top" data-i18n="footerBackTop">Back to top</a>
+      <a href="#" data-i18n="footerImprint">Imprint</a>
+      <a href="#" data-i18n="footerPrivacy">Privacy</a>
     </div>
   </footer>
 
+  <script src="lang.js"></script>
   <script>
     // Simple script to keep the footer year up to date
     document.getElementById("year").textContent = new Date().getFullYear();

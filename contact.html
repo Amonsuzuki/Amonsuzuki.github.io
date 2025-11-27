@@ -16,16 +16,17 @@
         </div>
         <div class="logo-text">
           <div class="logo-name">Amon Suzuki</div>
-          <div class="logo-role">Developer / Researcher</div>
+          <div class="logo-role" data-i18n="logoRole">Developer / Researcher</div>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="skills.html" data-i18n="navSkills">Skills</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button class="lang-switcher" onclick="toggleLanguage()" aria-label="Switch to Japanese">日本語</button>
         <a class="nav-cta" href="#" download>
-          <span>Download CV</span>
+          <span data-i18n="navDownloadCV">Download CV</span>
           <span>↓</span>
         </a>
       </nav>
@@ -35,25 +36,25 @@
   <main>
     <!-- Contact -->
     <section id="contact">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Say hello</h2>
-      <p class="section-description">
+      <div class="section-label" data-i18n="contactLabel">Contact</div>
+      <h2 class="section-title" data-i18n="contactTitle">Say hello</h2>
+      <p class="section-description" data-i18n="contactDesc">
         Whether you're interested in working together, have a question, or just
         want to share an idea, feel free to get in touch.
       </p>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <p>
+          <p data-i18n="contactText1">
             The fastest way to reach me is by email, but I'm also occasionally
             active on GitHub and LinkedIn. Short introductions are welcome.
           </p>
-          <p>
+          <p data-i18n="contactText2">
             If you already have a project in mind, it helps to include your
             timeline, rough scope, and any links to references or existing
             work.
           </p>
-          <div class="contact-meta">
+          <div class="contact-meta" data-i18n="contactMeta">
             Preferred contact hours: weekday evenings (GMT+9), but I'll reply as
             soon as I can.
           </div>
@@ -61,42 +62,44 @@
             <a href="mailto:amonsuzuki@keio.jp">amonsuzuki@keio.jp</a>
             <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/amon-suzuki-19b9b6316/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="#" target="_blank" rel="noreferrer">Resume / CV</a>
+            <a href="#" target="_blank" rel="noreferrer" data-i18n="contactResume">Resume / CV</a>
           </div>
         </div>
 
         <form class="contact-form" onsubmit="event.preventDefault()">
           <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Who's reaching out?" />
+            <label for="name" data-i18n="formName">Name</label>
+            <input id="name" name="name" data-i18n-placeholder="formNamePlaceholder" placeholder="Who's reaching out?" />
           </div>
           <div class="form-row">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="formEmail">Email</label>
             <input
               id="email"
               type="email"
               name="email"
+              data-i18n-placeholder="formEmailPlaceholder"
               placeholder="Where can I reply?"
             />
           </div>
           <div class="form-row">
-            <label for="message">Message</label>
+            <label for="message" data-i18n="formMessage">Message</label>
             <textarea
               id="message"
               name="message"
+              data-i18n-placeholder="formMessagePlaceholder"
               placeholder="Tell me a bit about what you have in mind."
             ></textarea>
-            <div class="form-hint">
+            <div class="form-hint" data-i18n="formHint">
               This form is only a visual example. Connect it to your backend or
               a service like Formspree / Netlify Forms.
             </div>
           </div>
           <div class="form-footer">
             <button type="submit" class="btn-primary">
-              <span>Send message</span>
+              <span data-i18n="formSubmit">Send message</span>
               <span class="btn-icon">↗</span>
             </button>
-            <span>No spam. I'll only use your details to reply.</span>
+            <span data-i18n="formSpam">No spam. I'll only use your details to reply.</span>
           </div>
         </form>
       </div>
@@ -104,14 +107,15 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerCopyright">Crafted with care.</span></div>
     <div class="footer-links">
-      <a href="index.html">Back to home</a>
-      <a href="#">Imprint</a>
-      <a href="#">Privacy</a>
+      <a href="index.html" data-i18n="footerBackHome">Back to home</a>
+      <a href="#" data-i18n="footerImprint">Imprint</a>
+      <a href="#" data-i18n="footerPrivacy">Privacy</a>
     </div>
   </footer>
 
+  <script src="lang.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

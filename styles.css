@@ -178,6 +178,24 @@ section {
   border-color: rgba(56, 189, 248, 0.9);
 }
 
+.lang-switcher {
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  font-size: 0.82rem;
+  background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.16), transparent);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  color: var(--text-main);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  font-family: inherit;
+}
+
+.lang-switcher:hover {
+  border-color: rgba(168, 85, 247, 0.9);
+  background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.25), transparent);
+}
+
 /* ---------- Hero ---------- */
 .hero {
   display: grid;
