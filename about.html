@@ -16,15 +16,16 @@
         </div>
         <div class="logo-text">
           <div class="logo-name">Amon Suzuki</div>
-          <div class="logo-role">Developer / Researcher</div>
+          <div class="logo-role" data-i18n="logoRole">Developer / Researcher</div>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch language">日本語</button>
         <a class="nav-cta" href="#" download>
-          <span>Download CV</span>
+          <span data-i18n="navDownloadCV">Download CV</span>
           <span>↓</span>
         </a>
       </nav>
@@ -34,45 +35,45 @@
   <main>
     <!-- About -->
     <section id="about">
-      <div class="section-label">About</div>
-      <h2 class="section-title">A short introduction</h2>
-      <p class="section-description">
+      <div class="section-label" data-i18n="aboutLabel">About</div>
+      <h2 class="section-title" data-i18n="aboutTitle">A short introduction</h2>
+      <p class="section-description" data-i18n="aboutDesc">
         A developer and researcher passionate about hardware, AI, and robotics.
       </p>
 
       <div class="about-grid">
         <div class="about-text">
-          <p>
+          <p data-i18n="aboutText1">
             I'm a developer and researcher who works across hardware design, machine learning,
             and robotics. I enjoy building systems that combine software and hardware
             to solve complex problems.
           </p>
-          <p>
+          <p data-i18n="aboutText2">
             Recently, I've been working on Spiking Neural Networks implemented on ASIC
             and ROS/Autoware tools for autonomous vehicles. I enjoy working on projects
             that push technological boundaries.
           </p>
-          <p>
+          <p data-i18n="aboutText3">
             I'm currently exploring opportunities in hardware engineering,
             machine learning research, and autonomous systems development.
           </p>
         </div>
         <div class="about-highlights">
           <article class="highlight-card">
-            <div class="highlight-title">Background</div>
-            <div>
+            <div class="highlight-title" data-i18n="highlightBgTitle">Background</div>
+            <div data-i18n="highlightBgText">
               Hardware engineering (Verilog/ASIC), Machine Learning, and Robotics (ROS/Autoware).
               Research-oriented approach.
             </div>
-            <div class="highlight-meta">Engineering / Research · Self-driven learner</div>
+            <div class="highlight-meta" data-i18n="highlightBgMeta">Engineering / Research · Self-driven learner</div>
           </article>
           <article class="highlight-card">
-            <div class="highlight-title">How I work</div>
-            <div>
+            <div class="highlight-title" data-i18n="highlightWorkTitle">How I work</div>
+            <div data-i18n="highlightWorkText">
               I like calm communication, clear scopes, and feedback loops that
               are quick but respectful. Good documentation makes me happy.
             </div>
-            <div class="highlight-meta">Asynchronous-friendly · Remote-capable</div>
+            <div class="highlight-meta" data-i18n="highlightWorkMeta">Asynchronous-friendly · Remote-capable</div>
           </article>
         </div>
       </div>
@@ -80,22 +81,22 @@
 
     <!-- Biography -->
     <section id="biography">
-      <div class="section-label">Biography</div>
-      <h2 class="section-title">経歴 / Achievements</h2>
-      <p class="section-description">
+      <div class="section-label" data-i18n="biographyLabel">Biography</div>
+      <h2 class="section-title" data-i18n="biographyTitle">経歴 / Achievements</h2>
+      <p class="section-description" data-i18n="biographyDesc">
         主な活動・受賞歴
       </p>
 
       <div class="biography-timeline">
         <article class="biography-item">
-          <div class="biography-date">2025年7月</div>
+          <div class="biography-date" data-i18n="bioDate1">2025年7月</div>
           <div class="biography-content">
-            <div class="biography-title">NICT Quantum Camp 探索型人材育成コース</div>
-            <div class="biography-status">採択</div>
+            <div class="biography-title" data-i18n="bioTitle1">NICT Quantum Camp 探索型人材育成コース</div>
+            <div class="biography-status" data-i18n="bioStatus1">採択</div>
           </div>
         </article>
         <article class="biography-item">
-          <div class="biography-date">2025年8月</div>
+          <div class="biography-date" data-i18n="bioDate2">2025年8月</div>
           <div class="biography-content">
             <div class="biography-title">セキュリティ・キャンプ2025全国大会 L2「高位言語から物理レイアウトまで半導体設計ワークフローを経験して MyLSI を発注しよう！」ゼミ</div>
             <div class="biography-status">修了</div>
@@ -111,8 +112,8 @@
         <article class="biography-item">
           <div class="biography-date">2025年10月</div>
           <div class="biography-content">
-            <div class="biography-title">自動運転AIチャレンジ決勝</div>
-            <div class="biography-status">総合優勝　日本自動車工業会会長賞</div>
+            <div class="biography-title" data-i18n="bioTitle3">自動運転AIチャレンジ決勝</div>
+            <div class="biography-status" data-i18n="bioStatus3">総合優勝　日本自動車工業会会長賞</div>
           </div>
         </article>
       </div>
@@ -120,14 +121,15 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerText">Crafted with care.</span></div>
     <div class="footer-links">
-      <a href="index.html">Back to home</a>
-      <a href="#">Imprint</a>
-      <a href="#">Privacy</a>
+      <a href="index.html" data-i18n="footerBackHome">Back to home</a>
+      <a href="#" data-i18n="footerImprint">Imprint</a>
+      <a href="#" data-i18n="footerPrivacy">Privacy</a>
     </div>
   </footer>
 
+  <script src="language.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

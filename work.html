@@ -16,15 +16,16 @@
         </div>
         <div class="logo-text">
           <div class="logo-name">Amon Suzuki</div>
-          <div class="logo-role">Developer / Researcher</div>
+          <div class="logo-role" data-i18n="logoRole">Developer / Researcher</div>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="work.html" data-i18n="navWork">Work</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch language">日本語</button>
         <a class="nav-cta" href="#" download>
-          <span>Download CV</span>
+          <span data-i18n="navDownloadCV">Download CV</span>
           <span>↓</span>
         </a>
       </nav>
@@ -34,53 +35,53 @@
   <main>
     <!-- Projects -->
     <section id="projects">
-      <div class="section-label">Work</div>
-      <h2 class="section-title">Selected projects</h2>
-      <p class="section-description">
+      <div class="section-label" data-i18n="workLabel">Work</div>
+      <h2 class="section-title" data-i18n="workTitle">Selected projects</h2>
+      <p class="section-description" data-i18n="workDesc">
         A selection of my recent projects showcasing hardware design,
         machine learning, and software development.
       </p>
 
       <div class="projects-grid">
         <article class="project-card">
-          <div class="project-pill">2025 · Research</div>
-          <div class="project-title">Reward-implemented Spiking Neural Network</div>
-          <div class="project-desc">
+          <div class="project-pill" data-i18n="project1Pill">2025 · Research</div>
+          <div class="project-title" data-i18n="project1Title">Reward-implemented Spiking Neural Network</div>
+          <div class="project-desc" data-i18n="project1Desc">
             SNN that learns through STDP and Reward Feedback, designed for ASIC
             implementation with integrated on-chip memory using Tiny Tapeout.
           </div>
-          <div class="project-meta">Verilog · ASIC · Neural Networks</div>
+          <div class="project-meta" data-i18n="project1Meta">Verilog · ASIC · Neural Networks</div>
           <div class="project-footer">
-            <span>Role: Hardware Design & Research</span>
-            <a href="https://github.com/Amonsuzuki/Reward-implemented-Spiking-Neural-Network" target="_blank" rel="noreferrer">View</a>
+            <span data-i18n="project1Role">Role: Hardware Design & Research</span>
+            <a href="https://github.com/Amonsuzuki/Reward-implemented-Spiking-Neural-Network" target="_blank" rel="noreferrer" data-i18n="project1View">View</a>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-pill">2025 · Personal</div>
-          <div class="project-title">CosenseGraph</div>
-          <div class="project-desc">
+          <div class="project-pill" data-i18n="project2Pill">2025 · Personal</div>
+          <div class="project-title" data-i18n="project2Title">CosenseGraph</div>
+          <div class="project-desc" data-i18n="project2Desc">
             A 3D visualization tool for Cosense (formerly Scrapbox) that displays
             page relationships as an interactive node graph with LLM-powered clustering.
           </div>
-          <div class="project-meta">TypeScript · OpenAI API · 3D Visualization</div>
+          <div class="project-meta" data-i18n="project2Meta">TypeScript · OpenAI API · 3D Visualization</div>
           <div class="project-footer">
-            <span>Role: Full Stack Development</span>
-            <a href="https://github.com/Amonsuzuki/CosenseGraph" target="_blank" rel="noreferrer">View</a>
+            <span data-i18n="project2Role">Role: Full Stack Development</span>
+            <a href="https://github.com/Amonsuzuki/CosenseGraph" target="_blank" rel="noreferrer" data-i18n="project2View">View</a>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-pill">2025 · Tools</div>
-          <div class="project-title">MCAP Reader for Autoware</div>
-          <div class="project-desc">
+          <div class="project-pill" data-i18n="project3Pill">2025 · Tools</div>
+          <div class="project-title" data-i18n="project3Title">MCAP Reader for Autoware</div>
+          <div class="project-desc" data-i18n="project3Desc">
             A ROS bag analyzer adapted for MCAP files, enabling trajectory
             analysis and sensor data visualization for autonomous vehicles.
           </div>
-          <div class="project-meta">Python · ROS · Autoware</div>
+          <div class="project-meta" data-i18n="project3Meta">Python · ROS · Autoware</div>
           <div class="project-footer">
-            <span>Role: Development & Analysis</span>
-            <a href="https://github.com/Amonsuzuki/mcap_reader" target="_blank" rel="noreferrer">View</a>
+            <span data-i18n="project3Role">Role: Development & Analysis</span>
+            <a href="https://github.com/Amonsuzuki/mcap_reader" target="_blank" rel="noreferrer" data-i18n="project3View">View</a>
           </div>
         </article>
       </div>
@@ -88,14 +89,15 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerText">Crafted with care.</span></div>
     <div class="footer-links">
-      <a href="index.html">Back to home</a>
-      <a href="#">Imprint</a>
-      <a href="#">Privacy</a>
+      <a href="index.html" data-i18n="footerBackHome">Back to home</a>
+      <a href="#" data-i18n="footerImprint">Imprint</a>
+      <a href="#" data-i18n="footerPrivacy">Privacy</a>
     </div>
   </footer>
 
+  <script src="language.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
