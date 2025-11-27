@@ -158,26 +158,6 @@ section {
   width: 100%;
 }
 
-.nav-cta {
-  border-radius: 999px;
-  padding: 0.45rem 1rem;
-  border: 1px solid rgba(56, 189, 248, 0.5);
-  font-size: 0.82rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent);
-  backdrop-filter: blur(10px);
-}
-
-.nav-cta span {
-  transform: translateY(1px);
-}
-
-.nav-cta:hover {
-  border-color: rgba(56, 189, 248, 0.9);
-}
-
 /* Language Toggle Button */
 .lang-toggle {
   border-radius: 999px;
