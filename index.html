@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* ---------- Base & Theme ---------- */
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --card: #0f172a;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.16);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.3);
+      --radius-lg: 1.25rem;
+      --radius-xl: 2rem;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+      --transition-fast: 180ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    /* ---------- Header & Navigation ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.9),
+        rgba(2, 6, 23, 0.6),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 140deg,
+        #38bdf8,
+        #a855f7,
+        #f97316,
+        #38bdf8
+      );
+      padding: 2px;
+    }
+
+    .logo-mark-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .logo-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--text-muted);
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #38bdf8, #a855f7);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-cta span {
+      transform: translateY(1px);
+    }
+
+    .nav-cta:hover {
+      border-color: rgba(56, 189, 248, 0.9);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 3rem;
+      align-items: center;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .hero-pre {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-pre-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 3.4vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #38bdf8, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 38rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      font-size: 0.85rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, #38bdf8, #a855f7);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.5);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      font-size: 1rem;
+      transform: translateY(1px);
+    }
+
+    /* ---------- Hero Right: Card ---------- */
+    .hero-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: radial-gradient(circle at top left, #1d283a 0, #020617 55%);
+      box-shadow: var(--shadow-soft);
+      padding: 1.5rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.11), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(168, 85, 247, 0.12), transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(249, 115, 22, 0.08), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-card-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 2px;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.45), transparent 55%);
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-main);
+    }
+
+    .hero-card-meta-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-card-meta-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-chip {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+    }
+
+    .hero-card-body {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-body p + p {
+      margin-top: 0.6rem;
+    }
+
+    .hero-card-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.75rem;
+    }
+
+    .stat {
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.95rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 0.12rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.7rem;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.28);
+    }
+
+    .hero-card-footer-links {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .hero-card-footer-links a {
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* ---------- Sections ---------- */
+    .section-label {
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-description {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-bottom: 1.6rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .about-text p + p {
+      margin-top: 0.9rem;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .highlight-card {
+      padding: 0.9rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.82rem;
+    }
+
+    .highlight-title {
+      font-weight: 600;
+      font-size: 0.86rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .highlight-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 2.5fr);
+      gap: 2.5rem;
+    }
+
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+    }
+
+    .skill-groups {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .skill-card {
+      padding: 0.9rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.82rem;
+    }
+
+    .skill-card-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.86rem;
+    }
+
+    .skill-card-list {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      list-style: none;
+    }
+
+    .skill-card-list li + li {
+      margin-top: 0.15rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 0 0, #1f2937 0, #020617 60%);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+    }
+
+    .project-pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      align-self: flex-start;
+      color: var(--text-muted);
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+    }
+
+    .project-meta {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .project-footer {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .project-footer a {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
+      gap: 2.4rem;
+    }
+
+    .contact-card {
+      border-radius: 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.16),
+        rgba(15, 23, 42, 0.98)
+      );
+      padding: 1.4rem 1.3rem;
+      font-size: 0.9rem;
+      box-shadow: 0 14px 38px rgba(15, 23, 42, 0.75);
+    }
+
+    .contact-card p + p {
+      margin-top: 0.6rem;
+    }
+
+    .contact-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.9rem;
+    }
+
+    .contact-links {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-links a {
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-main);
+    }
+
+    .contact-form {
+      border-radius: 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      padding: 1.3rem 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .form-row {
+      margin-bottom: 0.8rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 0.55rem 0.75rem;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-hint {
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .form-footer {
+      margin-top: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.4rem 1.5rem 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        order: -1;
+      }
+      .about-grid,
+      .skills-grid,
+      .projects-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .skill-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+      main {
+        padding-top: 3.2rem;
+      }
+      .hero {
+        padding-top: 2.4rem;
+      }
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .skill-groups {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-mark">
+          <div class="logo-mark-inner">YN</div>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">Your Name</div>
+          <div class="logo-role">Developer / Designer</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#" download>
+          <span>Download CV</span>
+          <span>↓</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div class="hero-pre">
+          <span class="hero-pre-dot"></span>
+          <span>Open for collaborations & new roles</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span>Your Name</span><br />
+          Building thoughtful digital experiences.
+        </h1>
+        <p class="hero-subtitle">
+          I’m a developer and designer interested in clean interfaces, reliable
+          systems, and ideas that connect technology with everyday life.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Frontend Engineering</span>
+          <span class="tag">UI / UX Design</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Minimal Aesthetics</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            <span>Let’s work together</span>
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#projects" class="btn-ghost">
+            <span>View selected work</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Profile quick view">
+        <div class="hero-card-content">
+          <div class="hero-card-header">
+            <div class="hero-card-header-left">
+              <div class="avatar">
+                <div class="avatar-inner">YN</div>
+              </div>
+              <div>
+                <div class="hero-card-meta-title">Your Name</div>
+                <div class="hero-card-meta-sub">Based in Tokyo · Remote friendly</div>
+              </div>
+            </div>
+            <div class="hero-card-chip">Portfolio Snapshot</div>
+          </div>
+
+          <div class="hero-card-body">
+            <p>
+              I enjoy crafting interfaces that feel calm, precise, and a little
+              bit playful. I care about accessibility, performance, and design
+              systems that stay maintainable over time.
+            </p>
+            <p>
+              Outside of work, you’ll probably find me exploring cities,
+              capturing small details with a camera, or prototyping new tools.
+            </p>
+          </div>
+
+          <div class="hero-card-stats">
+            <div class="stat">
+              <div class="stat-label">Experience</div>
+              <div class="stat-value">3+ yrs</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Recent focus</div>
+              <div class="stat-value">Web UI</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Time zone</div>
+              <div class="stat-value">GMT+9</div>
+            </div>
+          </div>
+
+          <div class="hero-card-footer">
+            <div class="hero-card-footer-left">
+              <span class="status-dot"></span>
+              <span>Currently accepting selected freelance / side projects.</span>
+            </div>
+            <div class="hero-card-footer-links">
+              <a href="mailto:you@example.com">Email</a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-label">About</div>
+      <h2 class="section-title">A short introduction</h2>
+      <p class="section-description">
+        Replace this with a concise story about who you are, what you care
+        about, and how you like to work. Keep it simple and human.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I’m a developer who likes to move between design, code, and product
+            thinking. I’m drawn to clear structure, subtle motion, and interfaces
+            that feel effortless to use.
+          </p>
+          <p>
+            Recently, I’ve been focusing on modern web stacks, design systems,
+            and small tools that improve everyday workflows. I enjoy working
+            closely with designers and stakeholders to iterate quickly and ship
+            things that feel polished.
+          </p>
+          <p>
+            Right now, I’m looking for opportunities where I can help build
+            thoughtful products in a small, collaborative team.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <article class="highlight-card">
+            <div class="highlight-title">Background</div>
+            <div>
+              Mix of frontend, UI design, and interaction prototyping. Comfortable
+              working from early idea to shipped product.
+            </div>
+            <div class="highlight-meta">CS / Design hybrid · Self-driven learner</div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-title">How I work</div>
+            <div>
+              I like calm communication, clear scopes, and feedback loops that
+              are quick but respectful. Good documentation makes me happy.
+            </div>
+            <div class="highlight-meta">Asynchronous-friendly · Remote-capable</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">What I tend to use</h2>
+      <p class="section-description">
+        This is a snapshot of tools and technologies I’ve been using recently.
+        Feel free to adjust categories to match your profile.
+      </p>
+
+      <div class="skills-grid">
+        <div>
+          <div class="chip-list">
+            <span class="chip">TypeScript</span>
+            <span class="chip">React / Next.js</span>
+            <span class="chip">Vue</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Figma</span>
+            <span class="chip">Node.js</span>
+          </div>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-card">
+            <div class="skill-card-title">Frontend</div>
+            <ul class="skill-card-list">
+              <li>React, Next.js, Vue</li>
+              <li>TypeScript, modern CSS</li>
+              <li>Design systems & components</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-title">Design</div>
+            <ul class="skill-card-list">
+              <li>Figma & prototyping</li>
+              <li>UI / UX patterns</li>
+              <li>Visual hierarchy & layout</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-title">Other</div>
+            <ul class="skill-card-list">
+              <li>Git & GitHub</li>
+              <li>Basic backend (Node / APIs)</li>
+              <li>Collaboration & documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Selected projects</h2>
+      <p class="section-description">
+        A few examples of things I’ve worked on. Replace these with your own
+        projects, links, and descriptions.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-pill">2024 · Personal</div>
+          <div class="project-title">Calm Tasks</div>
+          <div class="project-desc">
+            A minimal task manager with a focus on gentle motion, keyboard
+            shortcuts, and a distraction-free interface.
+          </div>
+          <div class="project-meta">React · TypeScript · Framer Motion</div>
+          <div class="project-footer">
+            <span>Role: Design & Development</span>
+            <a href="#" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill">2023 · Client</div>
+          <div class="project-title">Studio Portfolio</div>
+          <div class="project-desc">
+            A responsive portfolio site for a small creative studio, with an
+            emphasis on typography and performance.
+          </div>
+          <div class="project-meta">Next.js · Tailwind CSS</div>
+          <div class="project-footer">
+            <span>Role: Frontend</span>
+            <a href="#" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill">2022 · Exploration</div>
+          <div class="project-title">Interface Experiments</div>
+          <div class="project-desc">
+            A collection of small prototypes exploring micro-interactions,
+            navigation, and layout systems.
+          </div>
+          <div class="project-meta">Figma · CodePen · React</div>
+          <div class="project-footer">
+            <span>Role: Concept & Prototype</span>
+            <a href="#" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Say hello</h2>
+      <p class="section-description">
+        Whether you’re interested in working together, have a question, or just
+        want to share an idea, feel free to get in touch.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p>
+            The fastest way to reach me is by email, but I’m also occasionally
+            active on GitHub and LinkedIn. Short introductions are welcome.
+          </p>
+          <p>
+            If you already have a project in mind, it helps to include your
+            timeline, rough scope, and any links to references or existing
+            work.
+          </p>
+          <div class="contact-meta">
+            Preferred contact hours: weekday evenings (GMT+9), but I’ll reply as
+            soon as I can.
+          </div>
+          <div class="contact-links">
+            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#" target="_blank" rel="noreferrer">Resume / CV</a>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault()">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Who’s reaching out?" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Where can I reply?"
+            />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell me a bit about what you have in mind."
+            ></textarea>
+            <div class="form-hint">
+              This form is only a visual example. Connect it to your backend or
+              a service like Formspree / Netlify Forms.
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn-primary">
+              <span>Send message</span>
+              <span class="btn-icon">↗</span>
+            </button>
+            <span>No spam. I’ll only use your details to reply.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Your Name. Crafted with care.</div>
+    <div class="footer-links">
+      <a href="#top">Back to top</a>
+      <a href="#">Imprint</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple script to keep the footer year up to date
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
