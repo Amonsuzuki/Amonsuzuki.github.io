@@ -43,12 +43,6 @@ const translations = {
     aboutText1: "I'm a developer and researcher who works across hardware design, machine learning, and robotics. I enjoy building systems that combine software and hardware to solve complex problems.",
     aboutText2: "Recently, I've been working on Spiking Neural Networks implemented on ASIC and ROS/Autoware tools for autonomous vehicles. I enjoy working on projects that push technological boundaries.",
     aboutText3: "I'm currently exploring opportunities in hardware engineering, machine learning research, and autonomous systems development.",
-    highlightBgTitle: "Background",
-    highlightBgText: "Hardware engineering (Verilog/ASIC), Machine Learning, and Robotics (ROS/Autoware). Research-oriented approach.",
-    highlightBgMeta: "Engineering / Research · Self-driven learner",
-    highlightWorkTitle: "How I work",
-    highlightWorkText: "I like calm communication, clear scopes, and feedback loops that are quick but respectful. Good documentation makes me happy.",
-    highlightWorkMeta: "Asynchronous-friendly · Remote-capable",
 
     // Biography section
     biographyLabel: "Biography",
@@ -151,12 +145,6 @@ const translations = {
     aboutText1: "ハードウェア設計、機械学習、ロボティクスに取り組む開発者・研究者です。ソフトウェアとハードウェアを組み合わせて複雑な問題を解決するシステムの構築を楽しんでいます。",
     aboutText2: "最近はASIC上に実装されたスパイキングニューラルネットワークや、自動運転車両向けのROS/Autowareツールに取り組んでいます。技術の限界を押し広げるプロジェクトに取り組むことを楽しんでいます。",
     aboutText3: "現在、ハードウェアエンジニアリング、機械学習研究、自律システム開発の機会を探しています。",
-    highlightBgTitle: "バックグラウンド",
-    highlightBgText: "ハードウェアエンジニアリング（Verilog/ASIC）、機械学習、ロボティクス（ROS/Autoware）。研究志向のアプローチ。",
-    highlightBgMeta: "エンジニアリング / 研究 · 自律型学習者",
-    highlightWorkTitle: "仕事のスタイル",
-    highlightWorkText: "穏やかなコミュニケーション、明確なスコープ、迅速かつ敬意を持ったフィードバックループを好みます。良いドキュメントがあると嬉しいです。",
-    highlightWorkMeta: "非同期コミュニケーション対応 · リモートワーク可能",
 
     // Biography section
     biographyLabel: "経歴",
