@@ -172,7 +172,7 @@ const translations = {
     // Work page
     workLabel: "実績",
     workTitle: "主なプロジェクト",
-    workDesc: "ハードウェア設計、機械学習、ソフトウェア開発を showcasing した最近のプロジェクトの一部です。",
+    workDesc: "ハードウェア設計、機械学習、ソフトウェア開発の最近のプロジェクトをご紹介します。",
     project1Pill: "2025 · 研究",
     project1Title: "報酬機構付きスパイキングニューラルネットワーク",
     project1Desc: "STDPと報酬フィードバックによって学習するSNN。Tiny Tapeoutを使用した統合オンチップメモリを備えたASIC実装向けに設計。",
