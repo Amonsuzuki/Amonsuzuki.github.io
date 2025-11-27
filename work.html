@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Work – Amon Suzuki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <div class="logo-mark-inner">AS</div>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">Amon Suzuki</div>
+          <div class="logo-role">Developer / Researcher</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="#" download>
+          <span>Download CV</span>
+          <span>↓</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Selected projects</h2>
+      <p class="section-description">
+        A selection of my recent projects showcasing hardware design,
+        machine learning, and software development.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-pill">2025 · Research</div>
+          <div class="project-title">Reward-implemented Spiking Neural Network</div>
+          <div class="project-desc">
+            SNN that learns through STDP and Reward Feedback, designed for ASIC
+            implementation with integrated on-chip memory using Tiny Tapeout.
+          </div>
+          <div class="project-meta">Verilog · ASIC · Neural Networks</div>
+          <div class="project-footer">
+            <span>Role: Hardware Design & Research</span>
+            <a href="https://github.com/Amonsuzuki/Reward-implemented-Spiking-Neural-Network" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill">2025 · Personal</div>
+          <div class="project-title">CosenseGraph</div>
+          <div class="project-desc">
+            A 3D visualization tool for Cosense (formerly Scrapbox) that displays
+            page relationships as an interactive node graph with LLM-powered clustering.
+          </div>
+          <div class="project-meta">TypeScript · OpenAI API · 3D Visualization</div>
+          <div class="project-footer">
+            <span>Role: Full Stack Development</span>
+            <a href="https://github.com/Amonsuzuki/CosenseGraph" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill">2025 · Tools</div>
+          <div class="project-title">MCAP Reader for Autoware</div>
+          <div class="project-desc">
+            A ROS bag analyzer adapted for MCAP files, enabling trajectory
+            analysis and sensor data visualization for autonomous vehicles.
+          </div>
+          <div class="project-meta">Python · ROS · Autoware</div>
+          <div class="project-footer">
+            <span>Role: Development & Analysis</span>
+            <a href="https://github.com/Amonsuzuki/mcap_reader" target="_blank" rel="noreferrer">View</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div class="footer-links">
+      <a href="index.html">Back to home</a>
+      <a href="#">Imprint</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

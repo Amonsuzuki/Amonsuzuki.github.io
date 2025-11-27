@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – Amon Suzuki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <div class="logo-mark-inner">AS</div>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">Amon Suzuki</div>
+          <div class="logo-role">Developer / Researcher</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="#" download>
+          <span>Download CV</span>
+          <span>↓</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="section-label">About</div>
+      <h2 class="section-title">A short introduction</h2>
+      <p class="section-description">
+        A developer and researcher passionate about hardware, AI, and blockchain.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a developer and researcher who works across hardware design, machine learning,
+            and robotics. I enjoy building systems that combine software and hardware
+            to solve complex problems.
+          </p>
+          <p>
+            Recently, I've been working on Spiking Neural Networks implemented on ASIC,
+            ROS/Autoware tools for autonomous vehicles, and blockchain applications
+            on Ethereum. I enjoy working on projects that push technological boundaries.
+          </p>
+          <p>
+            I'm currently exploring opportunities in hardware engineering,
+            machine learning research, and autonomous systems development.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <article class="highlight-card">
+            <div class="highlight-title">Background</div>
+            <div>
+              Hardware engineering (Verilog/ASIC), Machine Learning, Robotics (ROS/Autoware),
+              and Blockchain development (Ethereum). Research-oriented approach.
+            </div>
+            <div class="highlight-meta">Engineering / Research · Self-driven learner</div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-title">How I work</div>
+            <div>
+              I like calm communication, clear scopes, and feedback loops that
+              are quick but respectful. Good documentation makes me happy.
+            </div>
+            <div class="highlight-meta">Asynchronous-friendly · Remote-capable</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div class="footer-links">
+      <a href="index.html">Back to home</a>
+      <a href="#">Imprint</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
