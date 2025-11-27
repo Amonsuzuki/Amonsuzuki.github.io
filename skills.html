@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skills – Amon Suzuki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <div class="logo-mark-inner">AS</div>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">Amon Suzuki</div>
+          <div class="logo-role">Developer / Researcher</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="#" download>
+          <span>Download CV</span>
+          <span>↓</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">What I tend to use</h2>
+      <p class="section-description">
+        This is a snapshot of tools and technologies I've been using recently.
+        Feel free to adjust categories to match your profile.
+      </p>
+
+      <div class="skills-grid">
+        <div>
+          <div class="chip-list">
+            <span class="chip">Python</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Verilog</span>
+            <span class="chip">C++</span>
+            <span class="chip">ROS / Autoware</span>
+            <span class="chip">Ethereum / Solidity</span>
+          </div>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-card">
+            <div class="skill-card-title">Hardware / ASIC</div>
+            <ul class="skill-card-list">
+              <li>Verilog, Tiny Tapeout</li>
+              <li>Spiking Neural Networks</li>
+              <li>ASIC design & verification</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-title">Machine Learning</div>
+            <ul class="skill-card-list">
+              <li>Python, Jupyter Notebooks</li>
+              <li>Neural networks, STDP</li>
+              <li>Molecular simulation</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-title">Robotics & Web3</div>
+            <ul class="skill-card-list">
+              <li>ROS, Autoware, MCAP</li>
+              <li>Ethereum, Smart Contracts</li>
+              <li>TypeScript, Git & GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Amon Suzuki. Crafted with care.</div>
+    <div class="footer-links">
+      <a href="index.html">Back to home</a>
+      <a href="#">Imprint</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
