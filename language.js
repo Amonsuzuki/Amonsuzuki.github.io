@@ -45,8 +45,8 @@ const translations = {
 
     // Biography section
     biographyLabel: "Biography",
-    biographyTitle: "経歴 / Achievements",
-    biographyDesc: "主な活動・受賞歴",
+    biographyTitle: "Career / Achievements",
+    biographyDesc: "Key activities and awards",
     bioDate1: "July 2025",
     bioTitle1: "NICT Quantum Camp Exploratory Talent Development Course",
     bioStatus1: "Selected",
