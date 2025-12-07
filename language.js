@@ -5,7 +5,6 @@ const translations = {
     navAbout: "About",
     navWork: "Work",
     navContact: "Contact",
-    navDownloadCV: "Download CV",
     logoRole: "Developer / Researcher",
 
     // Hero section (index.html)
@@ -107,7 +106,6 @@ const translations = {
     navAbout: "自己紹介",
     navWork: "実績",
     navContact: "お問い合わせ",
-    navDownloadCV: "履歴書をダウンロード",
     logoRole: "開発者 / 研究者",
 
     // Hero section (index.html)
