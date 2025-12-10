@@ -59,6 +59,9 @@ const translations = {
     bioDate3: "October 2025",
     bioTitle3: "Autonomous Driving AI Challenge Finals",
     bioStatus3: "Grand Prize · Japan Automobile Manufacturers Association Chairman's Award",
+    bioDate4: "March 2024",
+    bioTitle4: "42 Tokyo",
+    bioStatus4: "Accepted",
 
     // Work page
     workLabel: "Work",
@@ -160,6 +163,9 @@ const translations = {
     bioDate3: "2025年10月",
     bioTitle3: "自動運転AIチャレンジ決勝",
     bioStatus3: "総合優勝　日本自動車工業会会長賞",
+    bioDate4: "2024年3月",
+    bioTitle4: "42 Tokyo",
+    bioStatus4: "合格",
 
     // Work page
     workLabel: "実績",
