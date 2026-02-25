@@ -115,8 +115,9 @@ const translations = {
     // Hero section (index.html)
     heroPreText: "コラボレーション・新しい機会を歓迎します",
     heroTitle1: "こんにちは、",
-    heroTitle2: "思慮深いデジタル体験を構築しています。",
-    heroSubtitle: "機械論的解釈可能性、AI4Science、ハードウェア設計、ロボティクスに興味を持つ開発者・研究者です。",
+
+    heroTitle2: "",
+    heroSubtitle: "ハードウェア設計、ニューラルネットワーク、ロボティクスに興味を持つ開発者・研究者です。",
     heroTag1: "ハードウェアエンジニアリング (ASIC/Verilog)",
     heroTag2: "機械論的解釈可能性",
     heroTag3: "AI4Science",
@@ -247,7 +248,7 @@ function applyTranslations(lang) {
   // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key]) {
+    if (key in t) {
       el.textContent = t[key];
     }
   });
@@ -255,7 +256,7 @@ function applyTranslations(lang) {
   // Update all elements with data-i18n-placeholder attribute
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (t[key]) {
+    if (key in t) {
       el.setAttribute('placeholder', t[key]);
     }
   });
