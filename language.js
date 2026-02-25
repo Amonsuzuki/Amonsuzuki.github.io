@@ -249,7 +249,22 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (key in t) {
-      el.textContent = t[key];
+      if (el.children.length > 0) {
+        // Preserve child elements (e.g., icons) by only updating direct text nodes
+        let textNode = null;
+        for (const node of el.childNodes) {
+          if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
+            textNode = node;
+          }
+        }
+        if (textNode) {
+          textNode.textContent = ' ' + t[key];
+        } else {
+          el.appendChild(document.createTextNode(' ' + t[key]));
+        }
+      } else {
+        el.textContent = t[key];
+      }
     }
   });
 
