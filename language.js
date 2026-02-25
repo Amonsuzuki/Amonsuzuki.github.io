@@ -112,7 +112,7 @@ const translations = {
 
     // Hero section (index.html)
     heroPreText: "コラボレーション・新しい機会を歓迎します",
-    heroTitle1: "こんにちは、",
+    heroTitle1: "",
 
     heroTitle2: "",
     heroSubtitle: "機械論的解釈可能性とAI4Scienceに焦点を当てた研究者として、人間とAIの研究能力のギャップを埋め、共同作業の未来を目指しています。",
