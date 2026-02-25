@@ -1,4 +1,8 @@
 /* ---------- Hugo Blox Academic CV Style ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: #ffffff;
   --bg-section-alt: #f7f7f7;
