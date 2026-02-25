@@ -11,15 +11,16 @@ const translations = {
     heroPreText: "Open for collaborations & new roles",
     heroTitle1: "Hi, I'm ",
     heroTitle2: "Building thoughtful digital experiences.",
-    heroSubtitle: "I'm a developer and researcher interested in hardware design, neural networks, and robotics.",
+    heroSubtitle: "I'm a developer and researcher interested in mechanistic interpretability, AI4Science, hardware design, and robotics.",
     heroTag1: "Hardware Engineering (ASIC/Verilog)",
-    heroTag2: "Machine Learning",
-    heroTag3: "Robotics / ROS",
+    heroTag2: "Mechanistic Interpretability",
+    heroTag3: "AI4Science",
+    heroTag4: "Robotics / ROS",
     heroViewWork: "View selected work",
     heroCardName: "Amon Suzuki",
     heroCardLocation: "Based in Tokyo · Remote friendly",
     heroCardChip: "Portfolio Snapshot",
-    heroCardBody1: "I enjoy working on hardware design, neural networks, and robotics. I care about building innovative solutions that push the boundaries of technology and create real-world impact.",
+    heroCardBody1: "My research focuses on mechanistic interpretability and AI4Science — understanding how neural networks work internally and applying AI to scientific discovery. I also work on hardware design and robotics to push the boundaries of technology.",
     heroCardBody2: "Outside of work, you'll find me exploring new technologies, contributing to open source, or working on research projects.",
     statExperience: "Experience",
     statRecentFocus: "Recent focus",
@@ -38,10 +39,10 @@ const translations = {
     // About page
     aboutLabel: "About",
     aboutTitle: "A short introduction",
-    aboutDesc: "A developer and researcher passionate about hardware, AI, and robotics.",
-    aboutText1: "I'm a developer and researcher who works across hardware design, machine learning, and robotics. I enjoy building systems that combine software and hardware to solve complex problems.",
-    aboutText2: "Recently, I've been working on Spiking Neural Networks implemented on ASIC and ROS/Autoware tools for autonomous vehicles. I enjoy working on projects that push technological boundaries.",
-    aboutText3: "I'm currently exploring opportunities in hardware engineering, machine learning research, and autonomous systems development.",
+    aboutDesc: "A developer and researcher passionate about mechanistic interpretability, AI4Science, hardware, and robotics.",
+    aboutText1: "I'm a developer and researcher who works across mechanistic interpretability, AI4Science, hardware design, and robotics. I enjoy building systems that combine software and hardware to solve complex problems.",
+    aboutText2: "Recently, I've been focusing on mechanistic interpretability and AI4Science — understanding how neural networks work internally and applying AI to scientific discovery. I also work on Spiking Neural Networks on ASIC and ROS/Autoware tools for autonomous vehicles.",
+    aboutText3: "I'm currently exploring opportunities in mechanistic interpretability research, AI4Science, hardware engineering, and autonomous systems development.",
 
     // Biography section
     biographyLabel: "Biography",
@@ -114,16 +115,18 @@ const translations = {
     // Hero section (index.html)
     heroPreText: "コラボレーション・新しい機会を歓迎します",
     heroTitle1: "こんにちは、",
-    heroTitle2: "思慮深いデジタル体験を構築しています。",
+
+    heroTitle2: "",
     heroSubtitle: "ハードウェア設計、ニューラルネットワーク、ロボティクスに興味を持つ開発者・研究者です。",
     heroTag1: "ハードウェアエンジニアリング (ASIC/Verilog)",
-    heroTag2: "機械学習",
-    heroTag3: "ロボティクス / ROS",
+    heroTag2: "機械論的解釈可能性",
+    heroTag3: "AI4Science",
+    heroTag4: "ロボティクス / ROS",
     heroViewWork: "実績を見る",
     heroCardName: "鈴木 亜門",
     heroCardLocation: "東京拠点 · リモートワーク可",
     heroCardChip: "ポートフォリオ概要",
-    heroCardBody1: "ハードウェア設計、ニューラルネットワーク、ロボティクスに取り組むことを楽しんでいます。技術の限界を押し広げ、現実世界にインパクトを与える革新的なソリューションの構築を大切にしています。",
+    heroCardBody1: "私の研究は機械論的解釈可能性とAI4Scienceに焦点を当てています。ニューラルネットワークが内部でどのように機能するかを理解し、AIを科学的発見に応用することに取り組んでいます。また、ハードウェア設計やロボティクスにも携わっています。",
     heroCardBody2: "仕事以外では、新しい技術の探求、オープンソースへの貢献、研究プロジェクトに取り組んでいます。",
     statExperience: "経験",
     statRecentFocus: "最近の注力分野",
@@ -142,10 +145,10 @@ const translations = {
     // About page
     aboutLabel: "自己紹介",
     aboutTitle: "簡単な自己紹介",
-    aboutDesc: "ハードウェア、AI、ロボティクスに情熱を持つ開発者・研究者。",
-    aboutText1: "ハードウェア設計、機械学習、ロボティクスに取り組む開発者・研究者です。ソフトウェアとハードウェアを組み合わせて複雑な問題を解決するシステムの構築を楽しんでいます。",
-    aboutText2: "最近はASIC上に実装されたスパイキングニューラルネットワークや、自動運転車両向けのROS/Autowareツールに取り組んでいます。技術の限界を押し広げるプロジェクトに取り組むことを楽しんでいます。",
-    aboutText3: "現在、ハードウェアエンジニアリング、機械学習研究、自律システム開発の機会を探しています。",
+    aboutDesc: "機械論的解釈可能性、AI4Science、ハードウェア、ロボティクスに情熱を持つ開発者・研究者。",
+    aboutText1: "機械論的解釈可能性、AI4Science、ハードウェア設計、ロボティクスに取り組む開発者・研究者です。ソフトウェアとハードウェアを組み合わせて複雑な問題を解決するシステムの構築を楽しんでいます。",
+    aboutText2: "最近は機械論的解釈可能性とAI4Scienceに注力しています。ニューラルネットワークの内部動作を理解し、AIを科学的発見に応用することを探求しています。また、ASIC上に実装されたスパイキングニューラルネットワークや、自動運転車両向けのROS/Autowareツールにも取り組んでいます。",
+    aboutText3: "現在、機械論的解釈可能性の研究、AI4Science、ハードウェアエンジニアリング、自律システム開発の機会を探しています。",
 
     // Biography section
     biographyLabel: "経歴",
@@ -245,7 +248,7 @@ function applyTranslations(lang) {
   // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key]) {
+    if (key in t) {
       el.textContent = t[key];
     }
   });
@@ -253,7 +256,7 @@ function applyTranslations(lang) {
   // Update all elements with data-i18n-placeholder attribute
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (t[key]) {
+    if (key in t) {
       el.setAttribute('placeholder', t[key]);
     }
   });
