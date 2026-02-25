@@ -29,16 +29,33 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero / Profile Widget -->
     <section class="hero">
-      <div>
+      <!-- Left: Avatar & social links -->
+      <div class="hero-profile-col">
+        <div class="avatar">
+          <div class="avatar-inner">AS</div>
+        </div>
+        <div class="hero-profile-meta">
+          <div class="hero-profile-name" data-i18n="heroCardName">Amon Suzuki</div>
+          <div class="hero-profile-role" data-i18n="logoRole">Developer / Researcher</div>
+          <div class="hero-profile-location" data-i18n="heroCardLocation">📍 Based in Tokyo · Remote friendly</div>
+        </div>
+        <div class="hero-social-links">
+          <a href="mailto:amonsuzuki@keio.jp" data-i18n="heroCardEmail">✉ Email</a>
+          <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer" data-i18n="heroCardGitHub">⌥ GitHub</a>
+          <a href="https://www.linkedin.com/in/amon-suzuki-19b9b6316/" target="_blank" rel="noreferrer">in LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Right: Bio -->
+      <div class="hero-bio-col">
         <div class="hero-pre">
           <span class="hero-pre-dot"></span>
-          <span data-i18n="heroPreText">Open for collaborations & new roles</span>
+          <span data-i18n="heroPreText">Open for collaborations &amp; new roles</span>
         </div>
         <h1 class="hero-title">
-          <span data-i18n="heroTitle1">Hi, I'm </span><span>Amon Suzuki</span><br />
-          <span data-i18n="heroTitle2">Building thoughtful digital experiences.</span>
+          <span data-i18n="heroTitle1">Hi, I'm </span><span>Amon Suzuki</span>
         </h1>
         <p class="hero-subtitle" data-i18n="heroSubtitle">
           I'm a developer and researcher interested in hardware design, neural networks,
@@ -51,80 +68,47 @@
           <span class="tag" data-i18n="heroTag3">Robotics / ROS</span>
         </div>
 
-        <div class="hero-actions">
+        <div class="hero-card-stats">
+          <div class="stat">
+            <div class="stat-label" data-i18n="statExperience">Experience</div>
+            <div class="stat-value">2+ yr</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label" data-i18n="statRecentFocus">Recent focus</div>
+            <div class="stat-value">ASIC/ML</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label" data-i18n="statTimeZone">Time zone</div>
+            <div class="stat-value">GMT+9</div>
+          </div>
+        </div>
+
+        <div class="hero-availability">
+          <span class="status-dot"></span>
+          <span data-i18n="heroCardFooterText">Currently accepting selected freelance / side projects.</span>
+        </div>
+
+        <div class="hero-actions" style="margin-top:1.5rem;">
           <a href="work.html" class="btn-primary">
             <span data-i18n="heroViewWork">View selected work</span>
             <span class="btn-icon">→</span>
           </a>
+          <a href="contact.html" class="btn-ghost">
+            <span data-i18n="navContact">Contact</span>
+          </a>
         </div>
       </div>
-
-      <aside class="hero-card" aria-label="Profile quick view">
-        <div class="hero-card-content">
-          <div class="hero-card-header">
-            <div class="hero-card-header-left">
-              <div class="avatar">
-                <div class="avatar-inner">AS</div>
-              </div>
-              <div>
-                <div class="hero-card-meta-title" data-i18n="heroCardName">Amon Suzuki</div>
-                <div class="hero-card-meta-sub" data-i18n="heroCardLocation">Based in Tokyo · Remote friendly</div>
-              </div>
-            </div>
-            <div class="hero-card-chip" data-i18n="heroCardChip">Portfolio Snapshot</div>
-          </div>
-
-          <div class="hero-card-body">
-            <p data-i18n="heroCardBody1">
-              I enjoy working on hardware design, neural networks, and robotics.
-              I care about building innovative solutions that push the boundaries
-              of technology and create real-world impact.
-            </p>
-            <p data-i18n="heroCardBody2">
-              Outside of work, you'll find me exploring new technologies,
-              contributing to open source, or working on research projects.
-            </p>
-          </div>
-
-          <div class="hero-card-stats">
-            <div class="stat">
-              <div class="stat-label" data-i18n="statExperience">Experience</div>
-              <div class="stat-value">2+ yr</div>
-            </div>
-            <div class="stat">
-              <div class="stat-label" data-i18n="statRecentFocus">Recent focus</div>
-              <div class="stat-value">ASIC/ML</div>
-            </div>
-            <div class="stat">
-              <div class="stat-label" data-i18n="statTimeZone">Time zone</div>
-              <div class="stat-value">GMT+9</div>
-            </div>
-          </div>
-
-          <div class="hero-card-footer">
-            <div class="hero-card-footer-left">
-              <span class="status-dot"></span>
-              <span data-i18n="heroCardFooterText">Currently accepting selected freelance / side projects.</span>
-            </div>
-            <div class="hero-card-footer-links">
-              <a href="mailto:amonsuzuki@keio.jp" data-i18n="heroCardEmail">Email</a>
-              <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer" data-i18n="heroCardGitHub">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </aside>
     </section>
-
-
-
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerText">Crafted with care.</span></div>
-    <div class="footer-links">
-      <a href="#top" data-i18n="footerBackTop">Back to top</a>
-      <a href="#" data-i18n="footerImprint">Imprint</a>
-      <a href="#" data-i18n="footerPrivacy">Privacy</a>
+    <div class="site-footer-inner">
+      <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerText">Crafted with care.</span></div>
+      <div class="footer-links">
+        <a href="#top" data-i18n="footerBackTop">Back to top</a>
+        <a href="#" data-i18n="footerImprint">Imprint</a>
+        <a href="#" data-i18n="footerPrivacy">Privacy</a>
+      </div>
     </div>
   </footer>
 
