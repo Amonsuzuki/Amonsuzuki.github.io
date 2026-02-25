@@ -127,7 +127,7 @@ const translations = {
     statExperience: "経験",
     statRecentFocus: "最近の注力分野",
     statTimeZone: "タイムゾーン",
-    heroCardFooterText: "現在、フリーランス・サイドプロジェクトを選定中です。",
+    heroCardFooterText: "現在、フリーランス・副業のご依頼を受け付けています。",
     heroCardEmail: "メール",
     heroCardGitHub: "GitHub",
 
@@ -205,7 +205,7 @@ const translations = {
     formMessagePlaceholder: "お気軽にメッセージをお書きください。",
     formHint: "このフォームは見本です。Formspree / Netlify Formsなどのサービスに接続してください。",
     formSubmit: "メッセージを送信",
-    formSpam: "スパムはありません。返信のためにのみ情報を使用します。"
+    formSpam: "スパムは送りません。いただいた情報はご返信にのみ使用します。"
   }
 };
 
