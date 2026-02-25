@@ -10,7 +10,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="nav-inner">
-      <a href="index.html" class="logo">
+      <a href="#" class="logo">
         <div class="logo-mark">
           <div class="logo-mark-inner">AS</div>
         </div>
@@ -20,9 +20,9 @@
         </div>
       </a>
       <nav class="nav-links">
-        <a href="about.html" data-i18n="navAbout">About</a>
-        <a href="work.html" data-i18n="navWork">Work</a>
-        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#projects" data-i18n="navWork">Work</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
         <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch language">日本語</button>
       </nav>
     </div>
@@ -90,11 +90,11 @@
         </div>
 
         <div class="hero-actions" style="margin-top:1.5rem;">
-          <a href="work.html" class="btn-primary">
+          <a href="#projects" class="btn-primary">
             <span data-i18n="heroViewWork">View selected work</span>
             <span class="btn-icon">→</span>
           </a>
-          <a href="contact.html" class="btn-ghost">
+          <a href="#contact" class="btn-ghost">
             <span data-i18n="navContact">Contact</span>
           </a>
         </div>
@@ -155,13 +155,218 @@
         </div>
       </aside>
     </section>
+
+    <!-- About -->
+    <section id="about" class="section-widget">
+      <div class="section-label" data-i18n="aboutLabel">About</div>
+      <h2 class="section-title" data-i18n="aboutTitle">A short introduction</h2>
+      <div class="section-divider"></div>
+      <p class="section-description" data-i18n="aboutDesc">
+        A developer and researcher passionate about hardware, AI, and robotics.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="aboutText1">
+            I'm a developer and researcher who works across hardware design, machine learning,
+            and robotics. I enjoy building systems that combine software and hardware
+            to solve complex problems.
+          </p>
+          <p data-i18n="aboutText2">
+            Recently, I've been focusing on mechanistic interpretability and AI4Science —
+            understanding how neural networks work internally and applying AI to scientific
+            discovery. I also work on Spiking Neural Networks on ASIC and ROS/Autoware
+            tools for autonomous vehicles.
+          </p>
+          <p data-i18n="aboutText3">
+            I'm currently exploring opportunities in mechanistic interpretability research,
+            AI4Science, hardware engineering, and autonomous systems development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section id="biography" class="section-widget">
+      <div class="section-label" data-i18n="biographyLabel">Biography</div>
+      <h2 class="section-title" data-i18n="biographyTitle">経歴 / Achievements</h2>
+      <div class="section-divider"></div>
+      <p class="section-description" data-i18n="biographyDesc">
+        主な活動・受賞歴
+      </p>
+
+      <div class="biography-timeline">
+        <article class="biography-item">
+          <div class="biography-date" data-i18n="bioDate4">2024年3月</div>
+          <div class="biography-content">
+            <div class="biography-title" data-i18n="bioTitle4">42 Tokyo</div>
+            <div class="biography-status" data-i18n="bioStatus4">合格</div>
+          </div>
+        </article>
+        <article class="biography-item">
+          <div class="biography-date" data-i18n="bioDate1">2025年7月</div>
+          <div class="biography-content">
+            <div class="biography-title" data-i18n="bioTitle1">NICT Quantum Camp 探索型人材育成コース</div>
+            <div class="biography-status" data-i18n="bioStatus1">採択</div>
+          </div>
+        </article>
+        <article class="biography-item">
+          <div class="biography-date" data-i18n="bioDate2">2025年8月</div>
+          <div class="biography-content">
+            <div class="biography-title" data-i18n="bioTitle2">セキュリティ・キャンプ2025全国大会 L2「高位言語から物理レイアウトまで半導体設計ワークフローを経験して MyLSI を発注しよう！」ゼミ</div>
+            <div class="biography-status" data-i18n="bioStatus2">修了</div>
+          </div>
+        </article>
+        <article class="biography-item">
+          <div class="biography-date" data-i18n="bioDate3Sep">2025年9月</div>
+          <div class="biography-content">
+            <div class="biography-title" data-i18n="bioTitle3Sep">自動運転AIチャレンジ予選</div>
+            <div class="biography-status" data-i18n="bioStatus3Sep">総合1位通過</div>
+          </div>
+        </article>
+        <article class="biography-item">
+          <div class="biography-date" data-i18n="bioDate3">2025年10月</div>
+          <div class="biography-content">
+            <div class="biography-title" data-i18n="bioTitle3">自動運転AIチャレンジ決勝</div>
+            <div class="biography-status" data-i18n="bioStatus3">総合優勝　日本自動車工業会会長賞</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-widget">
+      <div class="section-label" data-i18n="workLabel">Work</div>
+      <h2 class="section-title" data-i18n="workTitle">Selected projects</h2>
+      <div class="section-divider"></div>
+      <p class="section-description" data-i18n="workDesc">
+        A selection of my recent projects showcasing hardware design,
+        machine learning, and software development.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-pill" data-i18n="project1Pill">2025 · Personal</div>
+          <div class="project-title" data-i18n="project1Title">Reward-implemented Spiking Neural Network</div>
+          <div class="project-desc" data-i18n="project1Desc">
+            SNN that learns through STDP and Reward Feedback, designed for ASIC
+            implementation with integrated on-chip memory using Tiny Tapeout.
+          </div>
+          <div class="project-meta" data-i18n="project1Meta">Verilog · ASIC · Neural Networks</div>
+          <div class="project-footer">
+            <span data-i18n="project1Role">Role: Hardware Design &amp; Research</span>
+            <a href="https://github.com/Amonsuzuki/Reward-implemented-Spiking-Neural-Network" target="_blank" rel="noreferrer" data-i18n="project1View">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill" data-i18n="project2Pill">2025 · Personal</div>
+          <div class="project-title" data-i18n="project2Title">CosenseGraph</div>
+          <div class="project-desc" data-i18n="project2Desc">
+            A 3D visualization tool for Cosense (formerly Scrapbox) that displays
+            page relationships as an interactive node graph with LLM-powered clustering.
+          </div>
+          <div class="project-meta" data-i18n="project2Meta">TypeScript · OpenAI API · 3D Visualization</div>
+          <div class="project-footer">
+            <span data-i18n="project2Role">Role: Full Stack Development</span>
+            <a href="https://github.com/Amonsuzuki/CosenseGraph" target="_blank" rel="noreferrer" data-i18n="project2View">View</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-pill" data-i18n="project3Pill">2025 · Tools</div>
+          <div class="project-title" data-i18n="project3Title">MCAP Reader for Autoware</div>
+          <div class="project-desc" data-i18n="project3Desc">
+            A ROS bag analyzer adapted for MCAP files, enabling trajectory
+            analysis and sensor data visualization for autonomous vehicles.
+          </div>
+          <div class="project-meta" data-i18n="project3Meta">Python · ROS · Autoware</div>
+          <div class="project-footer">
+            <span data-i18n="project3Role">Role: Development &amp; Analysis</span>
+            <a href="https://github.com/Amonsuzuki/mcap_reader" target="_blank" rel="noreferrer" data-i18n="project3View">View</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-widget">
+      <div class="section-label" data-i18n="contactLabel">Contact</div>
+      <h2 class="section-title" data-i18n="contactTitle">Say hello</h2>
+      <div class="section-divider"></div>
+      <p class="section-description" data-i18n="contactDesc">
+        Whether you're interested in working together, have a question, or just
+        want to share an idea, feel free to get in touch.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p data-i18n="contactText1">
+            The fastest way to reach me is by email, but I'm also occasionally
+            active on GitHub and LinkedIn. Short introductions are welcome.
+          </p>
+          <p data-i18n="contactText2">
+            If you already have a project in mind, it helps to include your
+            timeline, rough scope, and any links to references or existing
+            work.
+          </p>
+          <div class="contact-meta" data-i18n="contactMeta">
+            Preferred contact hours: weekday evenings (GMT+9), but I'll reply as
+            soon as I can.
+          </div>
+          <div class="contact-links">
+            <a href="mailto:amonsuzuki@keio.jp">amonsuzuki@keio.jp</a>
+            <a href="https://github.com/Amonsuzuki" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/amon-suzuki-19b9b6316/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="#" target="_blank" rel="noreferrer" data-i18n="contactResume">Resume / CV</a>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault()">
+          <div class="form-row">
+            <label for="name" data-i18n="formName">Name</label>
+            <input id="name" name="name" placeholder="Who's reaching out?" data-i18n-placeholder="formNamePlaceholder" />
+          </div>
+          <div class="form-row">
+            <label for="email" data-i18n="formEmail">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Where can I reply?"
+              data-i18n-placeholder="formEmailPlaceholder"
+            />
+          </div>
+          <div class="form-row">
+            <label for="message" data-i18n="formMessage">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell me a bit about what you have in mind."
+              data-i18n-placeholder="formMessagePlaceholder"
+            ></textarea>
+            <div class="form-hint" data-i18n="formHint">
+              This form is only a visual example. Connect it to your backend or
+              a service like Formspree / Netlify Forms.
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn-primary">
+              <span data-i18n="formSubmit">Send message</span>
+              <span class="btn-icon">↗</span>
+            </button>
+            <span data-i18n="formSpam">No spam. I'll only use your details to reply.</span>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
       <div>© <span id="year"></span> Amon Suzuki. <span data-i18n="footerText">Crafted with care.</span></div>
       <div class="footer-links">
-        <a href="#top" data-i18n="footerBackTop">Back to top</a>
+        <a href="#" data-i18n="footerBackTop">Back to top</a>
         <a href="#" data-i18n="footerImprint">Imprint</a>
         <a href="#" data-i18n="footerPrivacy">Privacy</a>
       </div>
@@ -170,7 +375,6 @@
 
   <script src="language.js"></script>
   <script>
-    // Simple script to keep the footer year up to date
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
